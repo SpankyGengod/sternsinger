@@ -8,6 +8,7 @@
     $adress = mysqli_real_escape_string($_POST["inputAdress"]);
     $mail = mysqli_real_escape_string($POST["inputMail"]);
     $phone = mysqli_real_escape_string($_POST["inputPhone"]);
+    //test
     if (isset($_POST["input1"])) { $input1 = true; } else { $input1 = false; }
     if (isset($_POST["input2"])) { $input2 = true; } else { $input2 = false; }
     if (isset($_POST["input3"])) { $input3 = true; } else { $input3 = false; }
