@@ -1,0 +1,30 @@
+body {
+  padding-top: 54px;
+}
+
+.card {
+  background-color: #fff4cd;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.navcolor {
+  background-color: #ffdf64;
+}
+
+.header {
+  height: 50vh;
+  min-height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.card {
+  height: 100%;
+}
