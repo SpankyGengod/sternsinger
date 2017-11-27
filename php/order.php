@@ -13,7 +13,16 @@
     if (isset($_POST["input2"])) { $input2 = true; } else { $input2 = false; }
     if (isset($_POST["input3"])) { $input3 = true; } else { $input3 = false; }
     if (isset($_POST["input4"])) { $input4 = true; } else { $input4 = false; }
-    $sql = "INSERT INTO AUSFÜLLEN (id, name, adress, mail, phone, day1, day2, day3, day4) VALUES (NULL, '".$name."', '".$adress."', '".$mail."', '".$phone."', '.$input1.', '.$input2.', '.$input3.', '.$input4.')";
+    $sql = "INSERT INTO AUSFÜLLEN (id, name, adress, mail, phone, day1, day2, day3, day4) VALUES
+      (NULL,
+      '".mysql_real_escape_string($name)."',
+      '".mysql_real_escape_string($adress)."',
+      '".mysql_real_escape_string($mail)."',
+      '".mysql_real_escape_string($phone)."',
+      '.mysql_real_escape_string($input1).',
+      '.mysql_real_escape_string($input2).',
+      '.mysql_real_escape_string($input3).',
+      '.mysql_real_escape_string($input4).')";
     echo $sql;
     if (mysqli_query($conn, $sql)) {
       echo "JUHUUUU!";
